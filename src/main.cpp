@@ -50,7 +50,7 @@ public:
     digitalWrite(yellow, HIGH);
     if (!on) {
       digitalWrite(green, LOW);
-      currentTime + switchTime / 2;
+      currentTime += switchTime / 2;
     } else {
       currentTime += switchTime / 2;
     }
@@ -86,7 +86,7 @@ void setup() {
 }
 
 void TurnOn(int id[5], unsigned long t, unsigned int size = 2) {
-  for (unsigned int i = 0; i < 5; i++) {
+  for (int i = 0; i < 5; i++) {
     bool commonId = false;
     for (unsigned int k = 0; k < size; k++) {
       if (!size)
@@ -104,10 +104,12 @@ void loop() {
     Lys[i].doScheduledChange(t);
   }
 
-  if ((!EastKnapp) && (currentState != FotgjengerEast))
-    EastKnapp = digitalRead(EastFotgjengerKnapp);
-  if ((!NorthKnapp) && (currentState != FotgjengerNorth))
-    NorthKnapp = digitalRead(NorthFotgjengerKnapp);
+  if (currentState != FotgjengerBegge) {
+    if ((!EastKnapp) && (currentState != FotgjengerEast))
+      EastKnapp = digitalRead(EastFotgjengerKnapp);
+    if ((!NorthKnapp) && (currentState != FotgjengerNorth))
+      NorthKnapp = digitalRead(NorthFotgjengerKnapp);
+  }
 
   if ((!changedFotgjenger) &&
       (t >= previousChange + FotgjengerDelay + switchTime)) {
