@@ -104,10 +104,10 @@ void loop() {
     Lys[i].doScheduledChange(t);
   }
 
-  if (currentState != FotgjengerBegge) {
-    if ((!EastKnapp) && (currentState != FotgjengerEast))
+  if (currentState > fotgjengerStateStart) {
+    if (!EastKnapp)
       EastKnapp = digitalRead(EastFotgjengerKnapp);
-    if ((!NorthKnapp) && (currentState != FotgjengerNorth))
+    if (!NorthKnapp)
       NorthKnapp = digitalRead(NorthFotgjengerKnapp);
   }
 
