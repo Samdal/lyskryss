@@ -10,5 +10,5 @@ og bare trykke opplast inne i proskjektet
 ### ArduinoIDE
 Om du ønsker å kjøre det i Arduino sin egen IDE fordi du ikke
 kan nokk i programering til å vite at det er et dårlig IDE
-så er det bare å kopiere innholdet i src/main.cpp til ett nytt 
+så er det bare å kopiere innholdet i `src/main.cpp` til ett nytt 
 proskjekt i arduinoIDE-et, og trykke opplast der.
