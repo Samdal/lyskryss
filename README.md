@@ -1,6 +1,6 @@
 # Trafikklys i Arduino Frameworket
 Jeg har laget et utvidbart system hvor trafikklysene er objekter. Dette gjør at det er enkelt å legge til flere tilfeller, lys og overgangsfelt
-> Du finner koden i `src/main.cpp`
+> Du finner koden i [`src/main.cpp`](https://github.com/Samdal/lyskryss/blob/main/src/main.cpp)
 
 ## Hvordan kjører jeg programmet?
 ### PlatformIO
